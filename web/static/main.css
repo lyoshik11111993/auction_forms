@@ -14,3 +14,8 @@ tr td:first-child {
 .solidTable td,  .solidTable th {
     border: solid;
 }
+
+.cats {
+    width: 60px;
+    height: 60px;
+}

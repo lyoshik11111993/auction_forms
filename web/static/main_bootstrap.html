@@ -5,30 +5,60 @@
     <title>Title</title>
     <link href="/static/bootstrap/bootstrap.min.css" rel="stylesheet">
     <link href="/static/main.css" rel="stylesheet">
-    <script href="/static/bootstrap/bootstrap.min.js"> </script>
+    <script href="/static/bootstrap/bootstrap.min.js"></script>
 </head>
 <body>
-    <div class="jumbotron">
-
-         <form action="/form" method="post" enctype='application/json'>
-             <input type="email" name="email">
-             <input type="password" name="password">
-             <input type="checkbox" name="checkbox">Ilya Are you STILL watching?
-             <input type="submit">
-             <!--<div class="form-group">-->
-                 <!--<label for="email">Email address</label>-->
-                     <!--<input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="Enter email">-->
-             <!--</div>-->
-             <!---->
-             <!--<div class="form-group">-->
-                 <!--<label for="password">Password</label>-->
-                 <!--<input type="password" class="form-control" id="password" name="password" placeholder="Password">-->
-             <!--</div>-->
-         <!---->
-             <!---->
-             <!--<input type="submit" class="btn btn-primary">-->
-         </form>
-
-    </div>
+<div class="jumbotron">
+    <form action="/sellerform" method="post" enctype='application/json'>
+        <h4>Add a seller</h4>
+        <div class="form-group">
+            <label for="seller_name">Name</label>
+            <input type="text" class="form-control" id="seller_name" name="seller_name" placeholder="Enter name">
+        </div>
+        <input type="submit" class="btn btn-primary">
+    </form>
+</div>
+<div class="jumbotron">
+    <form action="/form" method="post" enctype='application/json'>
+        <h4>Add a buyer</h4>
+        <div class="form-group">
+            <label for="buyer_name">Name</label>
+            <input type="text" class="form-control" id="buyer_name" name="buyer_name" placeholder="Enter name">
+        </div>
+        <input type="submit" class="btn btn-primary">
+    </form>
+</div>
+<div class="jumbotron">
+    <form action="/form" method="post" enctype='application/json'>
+        <h4>Add a product</h4>
+        <div class="form-group">
+            <label for="product_name">Name</label>
+            <input type="text" class="form-control" id="product_name" name="product_name" placeholder="Enter name">
+        </div>
+        <div class="form-group">
+            <label for="seller_id">Seller`s ID</label>
+            <input type="text" class="form-control" id="seller_id" name="seller_id" placeholder="Enter seller`s ID">
+        </div>
+        <input type="submit" class="btn btn-primary">
+    </form>
+</div>
+<div class="jumbotron">
+    <form action="/form" method="post" enctype='application/json'>
+        <h4>Add a bid</h4>
+        <div class="form-group">
+            <label for="size">Size</label>
+            <input type="text" class="form-control" id="size" name="size" placeholder="Enter a size">
+        </div>
+        <div class="form-group">
+            <label for="buyer_id">Buyer`s ID</label>
+            <input type="text" class="form-control" id="buyer_id" name="buyer_id" placeholder="Enter buyer`s ID">
+        </div>
+        <div class="form-group">
+            <label for="product_id">Product`s ID</label>
+            <input type="text" class="form-control" id="product_id" name="product_id" placeholder="Enter product`s ID">
+        </div>
+        <input type="submit" class="btn btn-primary">
+    </form>
+</div>
 </body>
 </html>

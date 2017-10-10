@@ -13,18 +13,34 @@ import javax.annotation.Resource;
 
 @Controller
 public class MainController {
+    private static final String successPage = "/static/success.html";
 
     @RequestMapping(value = {"/","/home"}, method = RequestMethod.GET)
     public String getMain() {
         return "static/main_bootstrap.html";
     }
 
-    @RequestMapping(value = "/form", method = RequestMethod.GET)
-    public String getForm(@RequestParam(name = "email_field") String email,
-                          @RequestParam(value = "password_field") String password,
-                          @RequestParam(value = "checkbox_field", required = false, defaultValue = "false") Boolean checkbox) {
-        Boolean afhfghfghf = Boolean.valueOf("on");
-        return "/static/success.html";
+    @RequestMapping(value = "/sellerform", method = RequestMethod.GET)
+    public String getSellerForm(@RequestParam(name = "seller_name") String name) {
+        return successPage;
+    }
+
+    @RequestMapping(value = "/buyerform", method = RequestMethod.GET)
+    public String getBuyerForm(@RequestParam(name = "buyer_name") String name) {
+        return successPage;
+    }
+
+    @RequestMapping(value = "/productform", method = RequestMethod.GET)
+    public String getProductForm(@RequestParam(name = "product_name") String name,
+                                 @RequestParam(name = "seller_id") int sellerId) {
+        return successPage;
+    }
+
+    @RequestMapping(value = "/bidform", method = RequestMethod.GET)
+    public String getSellerForm(@RequestParam(name = "size") int size,
+                                @RequestParam(name = "buyer_id") int buyerId,
+                                @RequestParam(name = "product_id") int productId) {
+        return successPage;
     }
 
 }
